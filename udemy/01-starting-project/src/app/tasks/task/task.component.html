@@ -1,0 +1,16 @@
+<app-card>
+  <article>
+    <h2>{{ task.title }}</h2>
+
+    <time datetime="">
+      <!-- 57. Transform Template Data w/ Pipes -->
+      {{ task.dueDate | date : "fullDate" }}
+    </time>
+
+    <p>{{ task.summary }}</p>
+
+    <p class="actions">
+      <button (click)="onCompleteTask()">complete</button>
+    </p>
+  </article>
+</app-card>
