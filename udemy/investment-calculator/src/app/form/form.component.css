@@ -1,0 +1,30 @@
+form {
+  background-color: darkgreen;
+  border: 1px solid black;
+  box-shadow: 5px 5px black;
+  padding: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 4px;
+}
+
+label {
+  display: block;
+  font-size: small;
+  margin-bottom: 2px;
+}
+
+input {
+  border: 1px solid black;
+  box-shadow: 2px 2px black;
+}
+
+button {
+  width: 100%;
+  background-color: lightgreen;
+  border: 1px solid black;
+  box-shadow: 2px 2px black;
+}

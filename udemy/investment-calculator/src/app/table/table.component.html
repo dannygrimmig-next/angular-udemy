@@ -1,0 +1,27 @@
+@if(tableData.length > 0){
+<table>
+  <thead>
+    <tr>
+      <th>year</th>
+      <th>investment value</th>
+      <th>interest (year)</th>
+      <th>total interest</th>
+      <th>invested capital</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (row of tableData; track row.year) {
+    <tr [class.even]="row.year % 2">
+      <td>{{ row.year }}</td>
+      <td>{{ row.valueEndOfYear }}</td>
+      <td>{{ row.interest }}</td>
+      <td>{{ row.totalInterest }}</td>
+      <td>{{ row.totalAmountInvested }}</td>
+    </tr>
+    }
+  </tbody>
+</table>
+} @else {
+<p>Please enter some values and press 'Calculate'</p>
+}

@@ -1,1 +1,7 @@
-<h1 class="center">Practice Time!</h1>
+<main>
+  <app-header />
+
+  <app-form [form]="form" (submitForm)="handleFormSubmit()" />
+
+  <app-table [tableData]="tableData" />
+</main>
