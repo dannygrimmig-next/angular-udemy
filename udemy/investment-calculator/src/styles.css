@@ -1,8 +1,6 @@
 body {
   margin: 0;
   font-family: monospace;
-  background: radial-gradient(#40c794, #21b077);
-  color: #092821;
   min-height: 100vh;
 }
 
