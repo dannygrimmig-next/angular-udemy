@@ -17,6 +17,7 @@ export class TasksComponent {
 
   isAddingTask: Boolean = false;
 
+  // can also use: private taskService = inject(TaskService)
   constructor(private taskService: TasksService) {}
 
   get selectedUserTasks() {

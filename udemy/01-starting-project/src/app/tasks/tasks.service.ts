@@ -2,7 +2,11 @@ import { Injectable } from '@angular/core';
 import { dummyTasks } from '../../data/dummy-tasks';
 import { Task } from './task/task.model';
 
-@Injectable({ providedIn: 'root' })
+/**
+ * Service: extract logic and functions out to be reused throughout application
+ */
+
+@Injectable({ providedIn: 'root' }) //So that we can inject elswhere
 export class TasksService {
   private tasks: Task[] = dummyTasks;
 

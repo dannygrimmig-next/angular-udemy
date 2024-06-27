@@ -2,17 +2,23 @@
 
 <main>
   <ul id="users">
+    <!-- Loop: available for angular 17+ (otherwise ngFor) -->
     @for (user of users; track user.id){
-      <li>
-        <app-user [user]="user" [selected]="user.id === selectedUserId" (select)="onSelectUser(user.id)" />
-      </li>
+    <li>
+      <!-- UserComponent (app.user.html): pass in props user, selected, and select event listener (which calls onSelect user in app.component.ts) -->
+      <app-user
+        [user]="user"
+        [selected]="user.id === selectedUserId"
+        (select)="onSelectUser(user.id)"
+      />
+    </li>
     }
   </ul>
 
+  <!-- Conditional Rendering: available in anuglar 16+ -->
   @if (selectedUser) {
-    <app-tasks [userId]="selectedUser.id" [name]="selectedUser.name" />
+  <app-tasks [userId]="selectedUser.id" [name]="selectedUser.name" />
   } @else {
-    <p id="fallback">Select a user to see their tasks!</p>
+  <p id="fallback">Select a user to see their tasks!</p>
   }
-  
 </main>

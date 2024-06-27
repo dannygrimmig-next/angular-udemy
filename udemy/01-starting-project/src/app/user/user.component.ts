@@ -19,6 +19,7 @@ export class UserComponent {
     return 'assets/users/' + this.user.avatar;
   }
 
+  // Event Emitter -> output data to template (to be recieved in component that uses the user component)
   onSelectUser() {
     this.select.emit(this.user.id);
   }
